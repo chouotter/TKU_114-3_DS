@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class StudyMenu {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        while (true) {
+            System.out.println("=== Study Menu ===");
+            System.out.println("1. Review Java");
+            System.out.println("2. Practice loops");
+            System.out.println("3. Push to GitHub");
+            System.out.println("0. 離開");
+            System.out.print("請輸入選項：");
+
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Review Java");
+                    break;
+
+                case 2:
+                    System.out.println("Practice loops");
+                    break;
+
+                case 3:
+                    System.out.println("Push to GitHub");
+                    break;
+
+                case 0:
+                    System.out.println("程式結束");
+                    sc.close();
+                    return;
+
+                default:
+                    System.out.println("無效的選項");
+            }
+
+            System.out.println();
+        }
+    }
+}
